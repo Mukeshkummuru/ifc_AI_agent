@@ -1,0 +1,15 @@
+{
+    "builds": [
+      {
+        "src": "apprun.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "apprun.py"
+      }
+    ]
+  }
+  

@@ -22,7 +22,7 @@ def query():
         tokens = preprocess_input(user_input)
         intent = identify_intent(tokens)
 
-        model = load_ifc('assignment.ifc')
+        model = load_ifc('static/assignment.ifc')
         if not model:
             return jsonify({'response': 'Failed to load IFC file.'})
 
