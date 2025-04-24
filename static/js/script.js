@@ -21,7 +21,7 @@ function sendQuery() {
      
     chatBox.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
     input.value = "";
-    spinner.style.display = "inline-block"; // Show spinner
+    spinner.style.display = "inline-block";  
 
     // Send to backend
     fetch("/query", {
@@ -40,6 +40,6 @@ function sendQuery() {
         chatBox.innerHTML += `<p><strong>Bot:</strong> Error occurred.</p>`;
     })
     .finally(() => {
-        spinner.style.display = "none"; // Hide spinner after response
+        spinner.style.display = "none";  
     });
 }

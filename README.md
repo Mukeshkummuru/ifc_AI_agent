@@ -50,12 +50,12 @@ A conversational interface for querying IFC building models.
 
 2. **Setup** 
 
-   git clone [https://github.com/Mukeshkummuru/ifc_AI_agent]
-   create a virtual env(if needed)
-   Then open termianl [ pip install ifcopenshell flask numpy nltk ] - these are the required packages must
-   open apprun.py(if it is in visual studio click the top right play button to run)
+   * git clone [https://github.com/Mukeshkummuru/ifc_AI_agent]
+   * create a virtual env(if needed)
+   * Then open termianl [ pip install ifcopenshell flask numpy nltk ] - these are the required packages must
+   * open apprun.py(if it is in visual studio click the top right play button to run)
    or
-   in terminal type (python apprun.py)
+   * in terminal type (python apprun.py)
 
 
 Running the Application :-

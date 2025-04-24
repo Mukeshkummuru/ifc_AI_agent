@@ -35,7 +35,7 @@ def query():
             response = f"Total plastering area is {area:.2f} square meters." if area is not None else "Couldn't calculate plastering area."
 
         elif intent == 'wall_area':
-            area =  get_plastering_area(model)  # Assuming same logic
+            area =  get_plastering_area(model)  
             response = f"The total wall surface area is approximately {area:.2f} square meters." if area is not None else "Couldn't calculate wall surface area."
 
         elif intent == 'wall_count':
@@ -63,6 +63,5 @@ def query():
         return jsonify({'response': response})
     
     except Exception as e:
-        # Print error to server log
         print(f"🔥 Error in /query: {e}")
         return jsonify({'response': f"bot: error occurred ({str(e)})"})

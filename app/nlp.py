@@ -2,7 +2,7 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 
-# Ensure necessary NLTK data packages are downloaded
+ 
 nltk.download('punkt')
 nltk.download('wordnet')
 
@@ -16,7 +16,7 @@ def preprocess_input(user_input):
 def identify_intent(tokens):
     tokens_set = set(tokens)
 
-    # Greeting / non-technical small talk
+    
     casual_keywords = ['hello', 'hi', 'hey', 'thanks', 'please', 'good', 'morning', 'evening']
     if any(word in tokens_set for word in casual_keywords) and not {'wall', 'door', 'slab', 'plaster', 'volume', 'area', 'count'}.intersection(tokens_set):
         return 'greeting'

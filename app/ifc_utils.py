@@ -87,6 +87,6 @@ def get_door_count(model):
         doors = model.by_type('IfcDoor')
         return len(doors)
     except Exception as e:
-        print(f"⚠️ Error in get_door_count: {e}")
+        print(f"Error in get_door_count: {e}")
         return None
 
