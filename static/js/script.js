@@ -1,8 +1,8 @@
 const examples = [
     "How many walls?",
-    "Give total wall volume",
+    "Give total wall volume?",
     "What is the slab volume?",
-    "Show surface area of walls"
+    "Show surface area of walls?"
 ];
 
 let current = 0;
