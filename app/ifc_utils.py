@@ -80,3 +80,13 @@ def extract_element_volume(element):
                             except Exception:
                                 continue
     return 0.0
+
+
+def get_door_count(model):
+    try:
+        doors = model.by_type('IfcDoor')
+        return len(doors)
+    except Exception as e:
+        print(f"⚠️ Error in get_door_count: {e}")
+        return None
+
