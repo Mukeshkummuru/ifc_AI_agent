@@ -2,7 +2,8 @@
     "builds": [
       {
         "src": "apprun.py",
-        "use": "@vercel/python"
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "200mb" }
       }
     ],
     "routes": [
