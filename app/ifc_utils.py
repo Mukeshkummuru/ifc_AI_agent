@@ -90,3 +90,6 @@ def get_door_count(model):
         print(f"Error in get_door_count: {e}")
         return None
 
+def get_material_names(model):
+    materials = model.by_type("IfcMaterial")
+    return [mat.Name for mat in materials if hasattr(mat, "Name")]

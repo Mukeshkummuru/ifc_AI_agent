@@ -7,6 +7,7 @@ from app.ifc_utils import (
     get_slab_volume,
     get_wall_volume,
     get_door_count,
+    get_material_names,
 )
 
 main = Blueprint('main', __name__)
@@ -56,6 +57,10 @@ def query():
                 response = "Unable to count doors. Please check the model data."
             else:
                 response = f"There are {door_count} doors in the model."
+            
+        elif intent == 'material_names':
+            material_names = get_material_names(model)
+            response = "The materials used in this project are: " + ", ".join(material_names)  if material_names is not None else "materials are not found in the data"
 
         else:
             response = "I'm sorry, I didn't understand that. Could you please rephrase?"

@@ -18,7 +18,7 @@ def identify_intent(tokens):
 
     
     casual_keywords = ['hello', 'hi', 'hey', 'thanks', 'please', 'good', 'morning', 'evening']
-    if any(word in tokens_set for word in casual_keywords) and not {'wall', 'door', 'slab', 'plaster', 'volume', 'area', 'count'}.intersection(tokens_set):
+    if any(word in tokens_set for word in casual_keywords) and not {'wall', 'door', 'slab', 'plaster', 'volume', 'material', 'count','cost'}.intersection(tokens_set):
         return 'greeting'
 
     
@@ -34,5 +34,7 @@ def identify_intent(tokens):
         return 'door_count'
     if 'plaster' in tokens_set or 'plastering' in tokens_set or 'plastered' in tokens_set:
         return 'plastering_area'
+    if 'material' in tokens_set and any(w in tokens_set for w in ['names', 'used', 'materials','list']):
+        return 'material_names'
 
     return 'unknown'
