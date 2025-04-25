@@ -108,7 +108,7 @@ button:hover {
     100% { transform: rotate(360deg); }
 }
 
-/* Chat message animation */
+ 
 #chat-box p {
     animation: messageFade 0.3s ease-in-out;
     margin: 6px 0;
